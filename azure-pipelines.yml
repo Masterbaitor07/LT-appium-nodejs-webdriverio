@@ -6,11 +6,15 @@ pool:
 
 steps:
 - script: |
+    export LT_USERNAME=anshulr
+    export LT_ACCESS_KEY=LT_Vafdmse65NnAXvVWbRuR6d0Z9Qj7xq1e9AUI2qpbgK8vamb
     cd ios-sample
     npm install
-  displayName: 'Install Dependencies'
+  displayName: 'Set Env Variables & Install Dependencies'
 
 - script: |
+    export LT_USERNAME=anshulr
+    export LT_ACCESS_KEY=LT_Vafdmse65NnAXvVWbRuR6d0Z9Qj7xq1e9AUI2qpbgK8vamb
     cd ios-sample
     npm run SingleiOSWeb
   displayName: 'Run Single iOS Web Tests'
