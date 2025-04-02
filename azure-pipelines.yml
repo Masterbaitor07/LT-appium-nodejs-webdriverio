@@ -1,0 +1,16 @@
+trigger:
+- main  # Change this if using a different branch
+
+pool:
+  name: 'Default'  # Uses your self-hosted agent
+
+steps:
+- script: |
+    cd ios-sample
+    npm install
+  displayName: 'Install Dependencies'
+
+- script: |
+    cd ios-sample
+    npm run SingleiOSWeb
+  displayName: 'Run Single iOS Web Tests'
